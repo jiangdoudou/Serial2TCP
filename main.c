@@ -84,13 +84,14 @@ void wait_thread(void)
 	}
 }
 
-
+/*
 int main()
 {
 	maintest();	
 }
 
-/*
+*/
+
 
 int main()
 {
@@ -125,12 +126,12 @@ int main()
         {
 	        printf("\n%sInput the Send Message:\n",datetime);
        memset(buffer,0,BUFFER_SIEZE);
-        if(fgets(buffer,BUFFER_SIEZE,stdin) == NULL)
+        if(fgets(buffer,BUFFER_SIEZE,stdin) == NULL)//get input chars
         {
 			perror("Fgets");
 			break;
 		}
-		write(fd,buffer,strlen(buffer));		
+		write(fd,buffer,strlen(buffer));//send chars		
 			IsReceve = 0;
 			
 		}
@@ -144,4 +145,4 @@ int main()
  
 }
 
-*/
+
